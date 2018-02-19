@@ -26,6 +26,15 @@ class Player {
 
     }
     bet(20)
+
+    var flop1rank = gameState.community_cards[0].rank;
+    var flop1suit = gameState.community_cards[0].suit;
+
+    var flop2rank = gameState.community_cards[1].rank;
+    var flop2suit = gameState.community_cards[1].suit;
+
+    var flop3rank = gameState.community_cards[2].rank;
+    var flop3suit = gameState.community_cards[2].suit;
   }
 
   static showdown(gameState) {
