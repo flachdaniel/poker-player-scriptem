@@ -35,8 +35,17 @@ class Player {
                   bet(5000);
               }
           }
+          bet(0);
       }
 
+      if (listStrict.includes(card1Rank) || listStrict.includes(card2Rank)) {
+        if (card2Rank === card1Rank) {
+          bet(5000);
+        }
+        if (listAK.includes(card1Rank) && listAK.includes(card2Rank)) {
+          bet(5000);
+        }
+      }
 
       for (var index in gameState.players) {
         if (gameState.players[index].bet > 500) {
@@ -67,6 +76,8 @@ class Player {
           }
           bet(700);
         }
+
+
 
         bet(0);
 
