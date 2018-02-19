@@ -6,7 +6,7 @@ class Player {
   static betRequest(gameState, bet) {
     console.log(gameState);
 
-    var list = ["J", "D", "K", "A"];
+   /* var list = ["J", "D", "K", "A"];
     var card1Rank, card2Rank;
     for (var element in gameState.players){
       if (element.name === "ScriptEm") {
@@ -18,7 +18,7 @@ class Player {
       bet(1000)
     } else {
       bet(0)
-    }
+    }*/
     bet(1000)
   }
 
