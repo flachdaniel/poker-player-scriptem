@@ -7,7 +7,7 @@ class Player {
     try {
       console.log(gameState);
 
-      var list = ["9","10","J", "D", "K", "A"];
+      var listStrict = ["9","10","J", "D", "K", "A"];
       var listAK = ["A", "K"]
       var card1Rank, card2Rank;
       console.log("0.2 HELLO");
@@ -23,7 +23,7 @@ class Player {
           console.log(card2Rank);
         }
       }
-      if (list.includes(card1Rank) || list.includes(card2Rank)) {
+      if (listStrict.includes(card1Rank) || listStrict.includes(card2Rank)) {
         if (card2Rank == card1Rank) {
           bet(1000)
         }
