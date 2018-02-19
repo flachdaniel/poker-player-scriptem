@@ -18,6 +18,7 @@ class Player {
         // } else {
         //   bet(0)
         // }
+      console.error(gameState)
         bet(1000)
     }
 
