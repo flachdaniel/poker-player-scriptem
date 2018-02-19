@@ -25,7 +25,7 @@ class Player {
 
     } else {
 
-      bet(107)
+      bet(250)
     }
 
     bet(1000)
