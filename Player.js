@@ -44,7 +44,6 @@ class Player {
               }
           }
           bet(0);
-        }
         if (listLazy.includes(card1Rank) && listLazy.includes(card2Rank)) {
           bet(5000);
         }
