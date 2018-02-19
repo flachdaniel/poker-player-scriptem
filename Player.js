@@ -23,7 +23,6 @@ class Player {
         }
       }
 
-
       // betelési logika
       if (ActivePlayerCounter >= 3) {
           if (listStrict.includes(card1Rank) || listStrict.includes(card2Rank)) {
@@ -40,10 +39,25 @@ class Player {
           bet(1000);
         }
         bet(0);
+      //var flop1rank = gameState.community_cards[0].rank;
+      //console.log(flop1rank);
+     // var flop1suit = gameState.community_cards[0].suit;
+     // console.log(flop1suit);
+     // var flop2rank = gameState.community_cards[1].rank;
+     // console.log(flop2rank);
+      // var flop2suit = gameState.community_cards[1].suit;
+      //console.log(flop2suit);
+     // var flop3rank = gameState.community_cards[2].rank;
+     // console.log(flop3rank);
+     // var flop3suit = gameState.community_cards[2].suit;
+     // console.log(flop3suit);
+
     }
     catch (err) {
       bet(0)
     }
+
+    bet(20)
   }
 
   static showdown(gameState) {
