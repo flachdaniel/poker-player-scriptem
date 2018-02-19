@@ -53,9 +53,12 @@ class Player {
           }
         }
         var flop = [];
+        var suits = [];
+
 
         for (var index = 0; index < gameState.community_cards.length; index++){
            flop.add(gameState.community_cards[index].rank);
+           suits.add(gameState.community_cards[index].suit);
          }
         if(flop.length == 0) {
           if (listLazy.includes(card1Rank) && listLazy.includes(card2Rank)) {
@@ -76,8 +79,18 @@ class Player {
           }
           bet(700);
         }
-
-
+        var howManySameSuit = 1;
+        for (var index in suits) {
+          if (suits[index] == card1Suit || suits[index] == card2Suit) {
+            howManySameSuit = howManySameSuit +1;
+          }
+        }
+        if (card1Suit === card2Suit) {
+          howManySameSuit = howManySameSuit +1;
+        }
+        if (howManySameSuit >=4) {
+          bet(600);
+        }
 
         bet(0);
 
