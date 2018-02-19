@@ -4,11 +4,13 @@ class Player {
   }
 
   static betRequest(gameState, bet) {
-    //console.log(gameState);
+    console.log(gameState);
 
     var list = ["J", "D", "K", "A"];
     var card1Rank, card2Rank;
+    console.log("Hello");
     for (var element in gameState.players){
+      console.log(element);
       console.log(gameState.players[element].name);
       if (element.name == "ScriptEm") {
         console.log("IN");
@@ -19,14 +21,14 @@ class Player {
         console.log(card2Rank);
       }
     }
-    if(list.includes(card1Rank) || list.includes(card2Rank)) {
-
-      bet(1000)
-
-    } else {
-
-      bet(250)
-    }
+    // if(list.includes(card1Rank) || list.includes(card2Rank)) {
+    //
+    //   bet(1000)
+    //
+    // } else {
+    //
+    //   bet(250)
+    // }
 
     bet(1000)
   }
