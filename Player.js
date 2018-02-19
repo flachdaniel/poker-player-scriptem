@@ -4,9 +4,9 @@ class Player {
   }
 
   static betRequest(gameState, bet) {
-    console.log(gameState);
+    console.log("EZAZ: " + gameState);
+
     var list = ["J", "D", "K", "A"];
-    var asd;
     var card1Rank, card2Rank;
     for (var element in gameState.players){
       if (element.name === "ScriptEm") {
