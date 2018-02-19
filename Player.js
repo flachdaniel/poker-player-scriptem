@@ -4,7 +4,7 @@ class Player {
   }
 
   static betRequest(gameState, bet) {
-    console.log("EZAZ: " + gameState);
+    console.log(gameState);
 
     var list = ["J", "D", "K", "A"];
     var card1Rank, card2Rank;
