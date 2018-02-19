@@ -5,9 +5,9 @@ class Player {
 
   static betRequest(gameState, bet) {
     try {
-      var listStrict = ["9","10","J", "D", "K", "A"];
+      var listStrict = ["9","10","J", "Q", "K", "A"];
       var listAK = ["J","Q" ,"A", "K"];
-      var listLazy = ["10","J", "D", "K", "A"];
+      var listLazy = ["10","J", "Q", "K", "A"];
       var card1Rank, card2Rank;
       var card1Suit, card2Suit;
       var ActivePlayerCounter = 0;
@@ -32,7 +32,7 @@ class Player {
                   bet(5000);
               }
               if (listAK.includes(card1Rank) && listAK.includes(card2Rank)) {
-                if (card2Rank == "A" || card1Rank == "A") {
+                if (card2Rank === "A" || card1Rank === "A") {
                   bet(5000);
                 }
               }
@@ -40,12 +40,53 @@ class Player {
           bet(0);
       }
 
-      if (listStrict.includes(card1Rank) || listStrict.includes(card2Rank)) {
+
+        // FINAL FIGHT
+
+        if(ActivePlayerCounter === 2) {
+            for (var index in gameState.players) {
+                if (gameState.players[index].name === "ScriptEm") {
+                    if(gameState.players[index].stack > 450) {
+                        if (listStrict.includes(card1Rank) || listStrict.includes(card2Rank)) {
+                            if (card2Rank === card1Rank) {
+                                bet(5000);
+                            }
+                            if (listAK.includes(card1Rank) && listAK.includes(card2Rank)) {
+                                bet(1000);
+                            }
+                            if (card1Rank === card2Rank) {
+                                bet(5000);
+                            }
+                        }
+                        bet(0);
+                    }
+                    if(gameState.players[index].stack <= 450) {
+                        if (listStrict.includes(card1Rank) && listStrict.includes(card2Rank)) {
+                            bet(5000);
+                        }
+                        if (listAK.includes(card1Rank) || listAK.includes(card2Rank)) {
+                            if(card1Suit === card2Suit) {
+                                bet(5000);
+                            }
+                        }
+                        if (card1Rank === card2Rank) {
+                            bet(5000);
+                        }
+                        bet(0);
+                    }
+                }
+            }
+        }
+
+
+        if (listStrict.includes(card1Rank) || listStrict.includes(card2Rank)) {
         if (card2Rank === card1Rank) {
           bet(5000);
         }
         if (listAK.includes(card1Rank) && listAK.includes(card2Rank)) {
-          bet(5000);
+            if (card2Rank === "A" || card1Rank === "A") {
+              bet(5000);
+            }
         }
       }
 
@@ -62,9 +103,9 @@ class Player {
            flop.add(gameState.community_cards[index].rank);
            suits.add(gameState.community_cards[index].suit);
          }
-        if(flop.length == 0) {
+        if(flop.length === 0) {
           if (listLazy.includes(card1Rank) && listLazy.includes(card2Rank)) {
-            if (card1Suit == card2Suit) {
+            if (card1Suit === card2Suit) {
               bet(400);
             }
             bet(200);
@@ -86,7 +127,7 @@ class Player {
         }
         var howManySameSuit = 1;
         for (var index in suits) {
-          if (suits[index] == card1Suit || suits[index] == card2Suit) {
+          if (suits[index] === card1Suit || suits[index] === card2Suit) {
             howManySameSuit = howManySameSuit +1;
           }
         }
@@ -96,17 +137,7 @@ class Player {
         if (howManySameSuit >=4) {
           bet(600);
         }
-
         bet(0);
-
-      /*if(gameState.community_cards.length == 3) {
-
-        var flop1rank = gameState.community_cards[0].rank;
-        console.log(flop1rank);
-        var flop1suit = gameState.community_cards[0].suit;
-        console.log(flop1suit);
-      }*/
-
     }
     catch (err) {
       bet(0);
