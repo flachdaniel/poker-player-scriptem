@@ -30,12 +30,11 @@ class Player {
       // if (ActivePlayerCounter >= 3) {
       for (var index in gameState.players) {
         if (gameState.players[index].name == "return 0") {
-           if (gameState.players[index].bet > 250) {
-             bet(0);
-           }
+          if (gameState.players[index].bet > 250) {
+            bet(0);
+          }
         }
-      if (gameState.pl)
-        console.log("TÖBB MINT 3 ACTIVE");
+      }
           if (listStrict.includes(card1Rank) || listStrict.includes(card2Rank)) {
               if (card2Rank === card1Rank) {
                   bet(5000);
