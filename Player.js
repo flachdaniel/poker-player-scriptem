@@ -44,6 +44,11 @@ class Player {
         if (card1Rank == card2Rank) {
           bet(5000)
         }
+        if (card1Suit == card2Suit) {
+          if (listAK.includes(card1Rank) || listAK.includes(card2Rank)) {
+            bet(5000)
+          }
+        }
         bet(0);
 
 
