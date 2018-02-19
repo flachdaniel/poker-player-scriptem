@@ -13,7 +13,7 @@ class Player {
       var card1Suit, card2Suit;
       var ActivePlayerCounter = 0;
       for (var index in gameState.players) {
-        if (gameState.players[index].name == "ScriptEm") {
+        if (gameState.players[index].name === "ScriptEm") {
           card1Rank = gameState.players[index].hole_cards[0].rank;
           card2Rank = gameState.players[index].hole_cards[1].rank;
           card1Suit = gameState.players[index].hole_cards[0].suit;
@@ -21,15 +21,16 @@ class Player {
         }
       }
       for (var index in gameState.players) {
-        if (gameState.players[index].status == "active") {
+        if (gameState.players[index].status === "active") {
           ActivePlayerCounter = ActivePlayerCounter + 1;
         }
       }
 
       // betelési logika
       if (ActivePlayerCounter >= 3) {
+        console.log("TÖBB MINT 3 ACTIVE");
           if (listStrict.includes(card1Rank) || listStrict.includes(card2Rank)) {
-              if (card2Rank == card1Rank) {
+              if (card2Rank === card1Rank) {
                   bet(5000);
               }
               if (listAK.includes(card1Rank) && listAK.includes(card2Rank)) {
@@ -41,12 +42,12 @@ class Player {
         if (listLazy.includes(card1Rank) && listLazy.includes(card2Rank)) {
           bet(5000);
         }
-        if (card1Rank == card2Rank) {
-          bet(5000)
+        if (card1Rank === card2Rank) {
+          bet(5000);
         }
-        if (card1Suit == card2Suit) {
+        if (card1Suit === card2Suit) {
           if (listAK.includes(card1Rank) || listAK.includes(card2Rank)) {
-            bet(5000)
+            bet(5000);
           }
         }
         bet(0);
@@ -61,10 +62,10 @@ class Player {
 
     }
     catch (err) {
-      bet(0)
+      bet(0);
     }
 
-    bet(20)
+    bet(20);
   }
 
   static showdown(gameState) {
