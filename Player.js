@@ -30,7 +30,7 @@ class Player {
     //   bet(250)
     // }
 
-    bet(1000)
+    bet(333)
   }
 
   static showdown(gameState) {
