@@ -1,6 +1,6 @@
 class Player {
   static get VERSION() {
-    return '0.1';
+    return 'Mint a talajvíz';
   }
 
   static betRequest(gameState, bet) {
