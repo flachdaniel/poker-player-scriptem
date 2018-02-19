@@ -12,7 +12,7 @@ class Player {
     for (var element in gameState.players){
       console.log(element);
       console.log(gameState.players[element].name);
-      if (element.name == "ScriptEm") {
+      if (gameState.players[element].name == "ScriptEm") {
         console.log("IN");
         console.log(gameState.players[element].hole_cards);
         card1Rank = gameState.players[element].hole_cards[0].rank;
