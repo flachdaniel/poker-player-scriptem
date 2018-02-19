@@ -21,14 +21,14 @@ class Player {
         console.log(card2Rank);
       }
     }
-    // if(list.includes(card1Rank) || list.includes(card2Rank)) {
-    //
-    //   bet(1000)
-    //
-    // } else {
-    //
-    //   bet(250)
-    // }
+    if(list.includes(card1Rank) || list.includes(card2Rank)) {
+
+      bet(1000)
+
+    } else {
+
+      bet(250)
+    }
 
     bet(333)
   }
