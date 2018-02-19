@@ -5,6 +5,7 @@ class Player {
 
   static betRequest(gameState, bet) {
     var list = ["J", "D", "K", "A"];
+    var asd;
     var card1Rank, card2Rank;
     for (var element in gameState["players"]){
       if (element["name"] === "ScriptEm") {
