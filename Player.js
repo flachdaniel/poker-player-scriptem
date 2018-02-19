@@ -1,6 +1,6 @@
 class Player {
   static get VERSION() {
-    return '0.2';
+    return '0.1';
   }
 
   static betRequest(gameState, bet) {
@@ -8,7 +8,7 @@ class Player {
 
     var list = ["J", "D", "K", "A"];
     var card1Rank, card2Rank;
-    console.log("Hello");
+    console.log("0.2 HELLO");
     for (var element in gameState.players){
       console.log(element);
       console.log(gameState.players[element].name);
@@ -22,11 +22,10 @@ class Player {
       }
     }
     if(list.includes(card1Rank) || list.includes(card2Rank)) {
-
       bet(1000)
 
     }
-    bet(400)
+    bet(20)
   }
 
   static showdown(gameState) {
