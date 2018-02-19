@@ -27,16 +27,19 @@ class Player {
       if (ActivePlayerCounter >= 3) {
           if (listStrict.includes(card1Rank) || listStrict.includes(card2Rank)) {
               if (card2Rank == card1Rank) {
-                  bet(1000);
+                  bet(5000);
               }
               if (listAK.includes(card1Rank) && listAK.includes(card2Rank)) {
-                  bet(1000);
+                  bet(5000);
               }
           }
           bet(0);
         }
         if (listLazy.includes(card1Rank) && listLazy.includes(card2Rank)) {
-          bet(1000);
+          bet(5000);
+        }
+        if(card2Rank == "A" || card1Rank == "A") {
+          bet(5000)
         }
         bet(0);
       //var flop1rank = gameState.community_cards[0].rank;
