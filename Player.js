@@ -62,6 +62,9 @@ class Player {
          }
         if(flop.length == 0) {
           if (listLazy.includes(card1Rank) && listLazy.includes(card2Rank)) {
+            if (card1Suit == card2Suit) {
+              bet(400);
+            }
             bet(200);
           }
           if (card1Rank === card2Rank) {
