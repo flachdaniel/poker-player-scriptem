@@ -6,7 +6,7 @@ class Player {
   static betRequest(gameState, bet) {
     //console.log(gameState);
 
-   var list = ["J", "D", "K", "A"];
+    var list = ["J", "D", "K", "A"];
     var card1Rank, card2Rank;
     console.log("Hello");
     for (var element in gameState.players){
