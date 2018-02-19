@@ -41,6 +41,9 @@ class Player {
         if (listLazy.includes(card1Rank) && listLazy.includes(card2Rank)) {
           bet(5000);
         }
+        if (card1Rank == card2Rank) {
+          bet(5000)
+        }
         if(card2Rank == "A" || card1Rank == "A") {
           bet(5000)
         }
