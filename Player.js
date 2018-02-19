@@ -39,11 +39,10 @@ class Player {
 
 
       for (var index in gameState.players) {
-        if (gameState.players[index].bet > 168) {
+        if (gameState.players[index].bet > 250) {
             bet(0);
           }
         }
-      }
 
 
         if (listLazy.includes(card1Rank) && listLazy.includes(card2Rank)) {
@@ -71,8 +70,6 @@ class Player {
     catch (err) {
       bet(0);
     }
-
-    bet(20);
   }
 
   static showdown(gameState) {
