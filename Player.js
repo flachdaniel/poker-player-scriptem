@@ -8,7 +8,10 @@ class Player {
 
    var list = ["J", "D", "K", "A"];
     var card1Rank, card2Rank;
+    console.error("Hello");
     for (var element in gameState.players){
+      console.error(element);
+      console.error(element.name);
       if (element.name === "ScriptEm") {
         card1Rank = element.hole_cards[0].rank;
         card2Rank = element.hole_cards[1].rank;
