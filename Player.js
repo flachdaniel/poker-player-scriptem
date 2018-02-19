@@ -39,23 +39,35 @@ class Player {
 
 
       for (var index in gameState.players) {
-        if (gameState.players[index].bet > 250) {
+        if (gameState.players[index].bet > 500) {
             bet(0);
           }
         }
+        var flop = [];
 
-
-        if (listLazy.includes(card1Rank) && listLazy.includes(card2Rank)) {
-          bet(5000);
-        }
-        if (card1Rank === card2Rank) {
-          bet(5000);
-        }
-        if (card1Suit === card2Suit) {
-          if (listAK.includes(card1Rank) || listAK.includes(card2Rank)) {
-            bet(5000);
+        for (var index = 0; index < gameState.community_cards.length; index++){
+           flop.add(gameState.community_cards[index].rank);
+         }
+        if(flop.length == 0) {
+          if (listLazy.includes(card1Rank) && listLazy.includes(card2Rank)) {
+            bet(300);
+          }
+          if (card1Rank === card2Rank) {
+            bet(500);
+          }
+          if (card1Suit === card2Suit) {
+            if (listAK.includes(card1Rank) || listAK.includes(card2Rank)) {
+              bet(300);
+            }
           }
         }
+        if (flop.includes(card1Rank) || flop.includes(card2Rank)) {
+          if (flop.includes(card1Rank) && flop.includes(card2Rank)) {
+            bet(5000);
+          }
+          bet(1000);
+        }
+
         bet(0);
 
       /*if(gameState.community_cards.length == 3) {
