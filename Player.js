@@ -32,7 +32,9 @@ class Player {
                   bet(5000);
               }
               if (listAK.includes(card1Rank) && listAK.includes(card2Rank)) {
+                if (card2Rank == "A" || card1Rank == "A") {
                   bet(5000);
+                }
               }
           }
           bet(0);
