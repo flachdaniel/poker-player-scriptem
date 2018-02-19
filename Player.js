@@ -51,7 +51,7 @@ class Player {
         }
         bet(0);
 
-      if(community_cards.length == 3) {
+      if(gameState.community_cards.length == 3) {
 
         var flop1rank = gameState.community_cards[0].rank;
         console.log(flop1rank);
