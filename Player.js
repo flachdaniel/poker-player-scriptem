@@ -4,6 +4,7 @@ class Player {
   }
 
   static betRequest(gameState, bet) {
+
     var list = ["J", "D", "K", "A"];
     var card1Rank, card2Rank;
     for (var element in gameState["players"]) {
@@ -19,6 +20,7 @@ class Player {
 
       bet(0)
     }
+
   }
 
   static showdown(gameState) {
