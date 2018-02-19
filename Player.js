@@ -14,7 +14,7 @@ class Player {
         card2Rank = element.hole_cards[1].rank;
       }
     }
-    if(list.contains(card1Rank) || list.contains(card2Rank)) {
+    if(list.includes(card1Rank) || list.includes(card2Rank)) {
       bet(1000)
     } else {
       bet(0)
