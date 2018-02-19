@@ -20,14 +20,21 @@ class Player {
           card2Suit = gameState.players[index].hole_cards[1].suit;
         }
       }
-      for (var index in gameState.players) {
-        if (gameState.players[index].status === "active") {
-          ActivePlayerCounter = ActivePlayerCounter + 1;
-        }
-      }
+      // for (var index in gameState.players) {
+      //   if (gameState.players[index].status === "active") {
+      //     ActivePlayerCounter = ActivePlayerCounter + 1;
+      //   }
+      // }
 
       // betelési logika
-      if (ActivePlayerCounter >= 3) {
+      // if (ActivePlayerCounter >= 3) {
+      for (var index in gameState.players) {
+        if (gameState.players[index].name == "return 0") {
+           if (gameState.players[index].bet > 250) {
+             bet(0);
+           }
+        }
+      if (gameState.pl)
         console.log("TÖBB MINT 3 ACTIVE");
           if (listStrict.includes(card1Rank) || listStrict.includes(card2Rank)) {
               if (card2Rank === card1Rank) {
