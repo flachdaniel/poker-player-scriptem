@@ -10,11 +10,14 @@ class Player {
       var listAK = ["A", "K"];
       var listLazy = ["10","J", "D", "K", "A"];
       var card1Rank, card2Rank;
+      var card1Suit, card2Suit;
       var ActivePlayerCounter = 0;
       for (var index in gameState.players) {
         if (gameState.players[index].name == "ScriptEm") {
           card1Rank = gameState.players[index].hole_cards[0].rank;
           card2Rank = gameState.players[index].hole_cards[1].rank;
+          card1Suit = gameState.players[index].hole_cards[0].suit;
+          card2Suit = gameState.players[index].hole_cards[1].suit;
         }
       }
       for (var index in gameState.players) {
