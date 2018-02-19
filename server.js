@@ -18,7 +18,7 @@ app.post('/', (req, res) => {
       break;
     case 'bet_request':
       Player.betRequest(JSON.parse(game_state), function(bet) {
-        res.json(bet);
+        res.json(1000);
       });
       break;
     case 'showdown':
