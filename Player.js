@@ -51,13 +51,13 @@ class Player {
         }
         bet(0);
 
-      if(gameState.community_cards.length == 3) {
+      /*if(gameState.community_cards.length == 3) {
 
         var flop1rank = gameState.community_cards[0].rank;
         console.log(flop1rank);
         var flop1suit = gameState.community_cards[0].suit;
         console.log(flop1suit);
-      }
+      }*/
 
     }
     catch (err) {
