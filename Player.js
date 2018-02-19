@@ -35,15 +35,14 @@ class Player {
           }
         }
       }
-          if (listStrict.includes(card1Rank) || listStrict.includes(card2Rank)) {
-              if (card2Rank === card1Rank) {
-                  bet(5000);
-              }
-              if (listAK.includes(card1Rank) && listAK.includes(card2Rank)) {
-                  bet(5000);
-              }
-          }
-          bet(0);
+        if (listStrict.includes(card1Rank) || listStrict.includes(card2Rank)) {
+            if (card2Rank === card1Rank) {
+                bet(5000);
+            }
+            if (listAK.includes(card1Rank) && listAK.includes(card2Rank)) {
+                bet(5000);
+            }
+        }
         if (listLazy.includes(card1Rank) && listLazy.includes(card2Rank)) {
           bet(gameState.pot/2);
         }
