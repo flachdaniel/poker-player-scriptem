@@ -50,14 +50,14 @@ class Player {
          }
         if(flop.length == 0) {
           if (listLazy.includes(card1Rank) && listLazy.includes(card2Rank)) {
-            bet(300);
+            bet(200);
           }
           if (card1Rank === card2Rank) {
-            bet(500);
+            bet(400);
           }
           if (card1Suit === card2Suit) {
             if (listAK.includes(card1Rank) || listAK.includes(card2Rank)) {
-              bet(300);
+              bet(200);
             }
           }
         }
@@ -65,7 +65,7 @@ class Player {
           if (flop.includes(card1Rank) && flop.includes(card2Rank)) {
             bet(5000);
           }
-          bet(1000);
+          bet(700);
         }
 
         bet(0);
