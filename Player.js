@@ -39,8 +39,7 @@ class Player {
 
 
       for (var index in gameState.players) {
-        if (gameState.players[index].name === "return 0") {
-          if (gameState.players[index].bet > 250) {
+        if (gameState.players[index].bet > 168) {
             bet(0);
           }
         }
