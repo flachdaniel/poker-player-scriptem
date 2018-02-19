@@ -7,7 +7,7 @@ class Player {
     try {
       console.log("0.2 HELLO");
       var listStrict = ["9","10","J", "D", "K", "A"];
-      var listAK = ["A", "K"];
+      var listAK = ["J","Q" ,"A", "K"];
       var listLazy = ["10","J", "D", "K", "A"];
       var card1Rank, card2Rank;
       var card1Suit, card2Suit;
