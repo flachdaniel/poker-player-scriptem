@@ -19,8 +19,10 @@ class Player {
     if(list.includes(card1Rank) || list.includes(card2Rank)) {
 
       bet(1000)
+
     } else {
-      bet(0)
+
+      bet(107)
     }
 
     bet(1000)
